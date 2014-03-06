@@ -2,10 +2,10 @@
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = "2"
+Vagrant.require_version ">= 1.5.0"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "precise64-wmit"
-  config.vm.box_url = "http://mirror.swem.wm.edu/vagrant/precise64-wmit.box"
+  config.vm.box = "wmit/precise64"
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
